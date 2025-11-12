@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Upload, FileText, CheckCircle } from 'lucide-react';
-// import './UploadBox.css';
+import './UploadBox.css';
 
 function UploadBox({ selectedFile, previewUrl, onFileChange, onDrop }) {
   const handleDragOver = (e) => {

@@ -1,0 +1,205 @@
+/* ============================================
+   FILE: src/components/UploadBox.css
+   ============================================ */
+
+.upload-box-container {
+  width: 100%;
+}
+
+.upload-dropzone {
+  border: 4px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-dropzone:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: scale(1.01);
+}
+
+.upload-dropzone:active {
+  transform: scale(0.99);
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: block;
+}
+
+.upload-icon {
+  color: #3b82f6;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.upload-dropzone:hover .upload-icon {
+  transform: translateY(-5px);
+  color: #2563eb;
+}
+
+.upload-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.upload-dropzone:hover .upload-title {
+  color: #3b82f6;
+}
+
+.upload-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.file-preview {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.file-icon {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.file-details {
+  flex: 1;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.file-name {
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  word-break: break-all;
+}
+
+.file-size {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.check-icon {
+  color: #10b981;
+  flex-shrink: 0;
+  animation: checkBounce 0.5s ease-out;
+}
+
+.preview-image-container {
+  border: 4px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  background: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upload-dropzone {
+    padding: 3rem 1rem;
+  }
+
+  .upload-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .upload-title {
+    font-size: 1.1rem;
+  }
+
+  .upload-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .preview-image {
+    height: 200px;
+  }
+  
+  .file-info {
+    padding: 1rem;
+  }
+  
+  .file-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-dropzone {
+    padding: 2rem 0.75rem;
+  }
+  
+  .preview-image {
+    height: 150px;
+  }
+  
+  .file-info {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  
+  .file-details {
+    margin-left: 0;
+    text-align: center;
+  }
+}

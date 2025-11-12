@@ -1,6 +1,6 @@
 
 import React from 'react';
-// import './QuestionCard.css';
+import './QuestionCard.css';
 
 function QuestionCard({ question }) {
   const getScoreColor = (score, max) => {

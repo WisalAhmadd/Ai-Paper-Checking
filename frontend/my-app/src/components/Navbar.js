@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart3 } from 'lucide-react';
-// import './Navbar.css';
+import './Navbar.css';
 
 function Navbar({ currentPage, onNavigate }) {
   const navItems = [
